@@ -1,0 +1,13 @@
+{
+  "name": "ai-resume-analyzer-root",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"cd backend && uvicorn main:app --reload\"",
+    "install:all": "npm install --prefix frontend && pip install -r backend/requirements.txt",
+    "backend": "cd backend && uvicorn main:app --reload",
+    "frontend": "npm run dev --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
